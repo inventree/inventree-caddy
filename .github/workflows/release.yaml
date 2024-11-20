@@ -1,0 +1,29 @@
+# Runs on release
+
+name: Publish Release
+on:
+  release:
+    types: [published]
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Push image to dockerhub
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      -
+        name: Build Image
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          tags: user/app:latest
