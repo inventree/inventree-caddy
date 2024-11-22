@@ -1,5 +1,7 @@
 ## inventree-caddy
 
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/inventree/inventree-caddy)
+
 This repository contains the source code for the `inventree-caddy` Docker image.
 
 The `inventree-caddy` image is based on the [Caddy docker image](https://hub.docker.com/_/caddy), and comes pre-loaded with a configuration file which works "out of the box" with InvenTree.
